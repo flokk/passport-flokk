@@ -1,0 +1,28 @@
+{
+  "name": "passport-flokk",
+  "version": "0.0.0",
+  "description": "Flokk authentication strategy for Passport and Node.js.",
+  "main": "./lib/passport-flokk",
+  "scripts": {
+    "test": "NODE_PATH=lib NODE_ENV=test node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flokk/passport-flokk.git"
+  },
+  "keywords": [
+    "flokk",
+    "passport"
+  ],
+  "author": "Cameron Bytheway <cameron@nujii.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "pkginfo": "~0.3.0",
+    "passport-oauth": "~0.1.13"
+  },
+  "devDependencies": {
+    "should": "~1.2.1",
+    "mocha": "~1.8.1"
+  }
+}
