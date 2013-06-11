@@ -30,7 +30,7 @@ describe("FlokkStrategy", function() {
 
       beforeEach(function(done) {
         strategy._oauth2.get = function(url, accessToken, callback) {
-          var body = '{"username": "CamShaft", "id": "1", "name": "Cameron Bytheway", "_links": {"account": {"href": "https://theflokk.com/users/CamShaft"}, "email": [{"href":"cameron@nujii.com"}, {"href": "cameron@theflokk.com"}]}}';
+          var body = '{"href": "https://api.theflokk.com/users/1", "username": "CamShaft", "id": "1", "name": "Cameron Bytheway", "email": [{"href":"cameron@nujii.com"}, {"href": "cameron@theflokk.com"}]}';
 
           callback(null, body, undefined);
         };
@@ -49,7 +49,7 @@ describe("FlokkStrategy", function() {
         profile.id.should.eql('1');
         profile.username.should.eql('CamShaft');
         profile.displayName.should.eql('Cameron Bytheway');
-        profile.profileUrl.should.eql('https://theflokk.com/users/CamShaft');
+        profile.profileUrl.should.eql('https://api.theflokk.com/users/1');
         profile.emails.length.should.eql(2);
         profile.emails[0].value.should.eql("cameron@nujii.com");
         profile.emails[1].value.should.eql("cameron@theflokk.com");
